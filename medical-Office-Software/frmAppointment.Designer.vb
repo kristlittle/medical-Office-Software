@@ -28,18 +28,14 @@ Partial Class frmAppointment
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -54,6 +50,12 @@ Partial Class frmAppointment
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dateDOB = New System.Windows.Forms.DateTimePicker()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtPHone = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -68,7 +70,7 @@ Partial Class frmAppointment
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(210, 309)
+        Me.DataGridView1.Location = New System.Drawing.Point(210, 305)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(429, 150)
         Me.DataGridView1.TabIndex = 42
@@ -76,7 +78,7 @@ Partial Class frmAppointment
         'btnDelete
         '
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(465, 227)
+        Me.btnDelete.Location = New System.Drawing.Point(463, 221)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(96, 32)
         Me.btnDelete.TabIndex = 41
@@ -97,7 +99,7 @@ Partial Class frmAppointment
         'btnEdit
         '
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEdit.Location = New System.Drawing.Point(345, 227)
+        Me.btnEdit.Location = New System.Drawing.Point(343, 221)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(96, 32)
         Me.btnEdit.TabIndex = 40
@@ -107,7 +109,7 @@ Partial Class frmAppointment
         'btnSave
         '
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.Location = New System.Drawing.Point(229, 227)
+        Me.btnSave.Location = New System.Drawing.Point(227, 221)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(96, 32)
         Me.btnSave.TabIndex = 39
@@ -118,34 +120,17 @@ Partial Class frmAppointment
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(328, 282)
+        Me.Label10.Location = New System.Drawing.Point(328, 275)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(110, 24)
         Me.Label10.TabIndex = 38
         Me.Label10.Text = "Patient List"
         '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(219, 132)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox4.TabIndex = 37
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(216, 111)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(91, 18)
-        Me.Label9.TabIndex = 36
-        Me.Label9.Text = "Insurance :"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(430, 61)
+        Me.Label8.Location = New System.Drawing.Point(431, 50)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 18)
         Me.Label8.TabIndex = 34
@@ -161,14 +146,6 @@ Partial Class frmAppointment
         Me.Label14.Size = New System.Drawing.Size(60, 18)
         Me.Label14.TabIndex = 9
         Me.Label14.Text = "Logout"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(433, 82)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(105, 20)
-        Me.DateTimePicker1.TabIndex = 32
         '
         'Panel1
         '
@@ -242,13 +219,6 @@ Partial Class frmAppointment
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Contact Book"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(219, 82)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox3.TabIndex = 31
-        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -283,7 +253,7 @@ Partial Class frmAppointment
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(216, 61)
+        Me.Label6.Location = New System.Drawing.Point(217, 50)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 18)
         Me.Label6.TabIndex = 27
@@ -293,7 +263,7 @@ Partial Class frmAppointment
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(430, 111)
+        Me.Label4.Location = New System.Drawing.Point(431, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 18)
         Me.Label4.TabIndex = 25
@@ -378,10 +348,59 @@ Partial Class frmAppointment
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(433, 132)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(434, 121)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(105, 20)
         Me.DateTimePicker2.TabIndex = 44
+        '
+        'dateDOB
+        '
+        Me.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dateDOB.Location = New System.Drawing.Point(434, 71)
+        Me.dateDOB.Name = "dateDOB"
+        Me.dateDOB.Size = New System.Drawing.Size(105, 20)
+        Me.dateDOB.TabIndex = 50
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(220, 71)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(161, 20)
+        Me.txtName.TabIndex = 49
+        '
+        'txtPHone
+        '
+        Me.txtPHone.Location = New System.Drawing.Point(220, 121)
+        Me.txtPHone.Name = "txtPHone"
+        Me.txtPHone.Size = New System.Drawing.Size(161, 20)
+        Me.txtPHone.TabIndex = 48
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(220, 172)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(319, 20)
+        Me.txtAddress.TabIndex = 47
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(217, 100)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(66, 18)
+        Me.Label17.TabIndex = 44
+        Me.Label17.Text = "Phone :"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(217, 151)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(76, 18)
+        Me.Label18.TabIndex = 45
+        Me.Label18.Text = "Reason :"
         '
         'frmAppointment
         '
@@ -389,21 +408,23 @@ Partial Class frmAppointment
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1130, 508)
         Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.dateDOB)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.txtPHone)
+        Me.Controls.Add(Me.txtAddress)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label4)
         Me.Name = "frmAppointment"
         Me.Text = "frmAppointment"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -432,19 +453,15 @@ Partial Class frmAppointment
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnSave As Button
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
@@ -454,4 +471,10 @@ Partial Class frmAppointment
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents dateDOB As DateTimePicker
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtPHone As TextBox
+    Friend WithEvents txtAddress As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
 End Class
