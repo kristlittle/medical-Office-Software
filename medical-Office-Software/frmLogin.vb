@@ -18,6 +18,7 @@
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-
+        txtUsername.Text = ""
+        txtPassword.Text = ""
     End Sub
 End Class

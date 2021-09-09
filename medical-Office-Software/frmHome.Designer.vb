@@ -33,17 +33,17 @@ Partial Class frmHome
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPHone = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.dateDOB = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.cbGender = New System.Windows.Forms.ComboBox()
+        Me.txtInsurance = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -188,19 +188,19 @@ Partial Class frmHome
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Name :"
         '
-        'TextBox2
+        'txtPHone
         '
-        Me.TextBox2.Location = New System.Drawing.Point(219, 120)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.txtPHone.Location = New System.Drawing.Point(219, 120)
+        Me.txtPHone.Name = "txtPHone"
+        Me.txtPHone.Size = New System.Drawing.Size(161, 20)
+        Me.txtPHone.TabIndex = 8
         '
-        'TextBox1
+        'txtAddress
         '
-        Me.TextBox1.Location = New System.Drawing.Point(219, 171)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.txtAddress.Location = New System.Drawing.Point(219, 171)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(161, 20)
+        Me.txtAddress.TabIndex = 7
         '
         'TabControl1
         '
@@ -232,20 +232,20 @@ Partial Class frmHome
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtName
         '
-        Me.TextBox3.Location = New System.Drawing.Point(219, 70)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox3.TabIndex = 10
+        Me.txtName.Location = New System.Drawing.Point(219, 70)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(161, 20)
+        Me.txtName.TabIndex = 10
         '
-        'DateTimePicker1
+        'dateDOB
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(433, 70)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(105, 20)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dateDOB.Location = New System.Drawing.Point(433, 70)
+        Me.dateDOB.Name = "dateDOB"
+        Me.dateDOB.Size = New System.Drawing.Size(105, 20)
+        Me.dateDOB.TabIndex = 11
         '
         'Label7
         '
@@ -267,21 +267,21 @@ Partial Class frmHome
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "DOB :"
         '
-        'ComboBox1
+        'cbGender
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Male", "Female", "Other"})
-        Me.ComboBox1.Location = New System.Drawing.Point(433, 120)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(105, 21)
-        Me.ComboBox1.TabIndex = 15
+        Me.cbGender.FormattingEnabled = True
+        Me.cbGender.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        Me.cbGender.Location = New System.Drawing.Point(433, 120)
+        Me.cbGender.Name = "cbGender"
+        Me.cbGender.Size = New System.Drawing.Size(105, 21)
+        Me.cbGender.TabIndex = 15
         '
-        'TextBox4
+        'txtInsurance
         '
-        Me.TextBox4.Location = New System.Drawing.Point(433, 171)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox4.TabIndex = 17
+        Me.txtInsurance.Location = New System.Drawing.Point(433, 171)
+        Me.txtInsurance.Name = "txtInsurance"
+        Me.txtInsurance.Size = New System.Drawing.Size(161, 20)
+        Me.txtInsurance.TabIndex = 17
         '
         'Label9
         '
@@ -424,16 +424,16 @@ Partial Class frmHome
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtInsurance)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbGender)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.dateDOB)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPHone)
+        Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label4)
@@ -467,17 +467,17 @@ Partial Class frmHome
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPHone As TextBox
+    Friend WithEvents txtAddress As TextBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents dateDOB As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents cbGender As ComboBox
+    Friend WithEvents txtInsurance As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox2 As PictureBox
